@@ -1,16 +1,13 @@
 #include <iostream>
-#include <vector>
-#include <iterator>
-#include <map>
-using std::vector;
-using std::map;
-using std::pair;
+#include <bits/stdc++.h>
+
+using namespace std;
 
 vector<int> twoSum(vector<int>& nums, int target)
 {
     map<int,int> numberIndex;
     vector<int> answer;
-    std::map<int,int>::iterator temp;
+    map<int,int>::iterator temp;
     int i, remainder;
     for(i=0; i<nums.size(); i++)
     {
@@ -22,8 +19,13 @@ vector<int> twoSum(vector<int>& nums, int target)
             answer.push_back(temp->second);
             break;
         }
-        numberIndex.insert( std::pair<int,int>(nums[i],i) );
+        numberIndex.insert( pair<int,int>(nums[i],i) );
     }
     return answer;
+}
+
+int main() {
+    // twoSum()
+    return 0;
 }
 
